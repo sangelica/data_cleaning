@@ -31,7 +31,7 @@ processData <- function ()
     
     # 5. get the column names from features.txt and set the names for the columns.
     t_colnames <- read.table("features.txt")
-    t_colnames <- t_colnames$V2
+    t_colnames <- sub("fBodyBody","fBody",t_colnames$V2)
     names(t_data) <- t_colnames
     
     # 6. Bind the subject and activity columns. Add names to the columns.

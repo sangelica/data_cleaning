@@ -53,6 +53,8 @@ meanFreq(): Weighted average of the frequency components to obtain a mean freque
 
 Finally, the values on each of the columns below are the calculated average values when data from step 8 above is grouped by subject and activity.
 
+Acceleration signal was separated into body and gravity acceleration signals (tbodyacc and tgravityacc) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
+These measurements are represented by the variables below.
 * tbodyacc-mean-x
 * tbodyacc-mean-y
 * tbodyacc-mean-z
@@ -65,24 +67,34 @@ Finally, the values on each of the columns below are the calculated average valu
 * tgravityacc-std-x            
 * tgravityacc-std-y
 * tgravityacc-std-z
+
+Body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tbodyaccjerk-XYZ and tbodygyrojerk-XYZ).
+These measurements are represented by the variables below.
+
 * tbodyaccjerk-mean-x          
 * tbodyaccjerk-mean-y
 * tbodyaccjerk-mean-z
 * tbodyaccjerk-std-x           
 * tbodyaccjerk-std-y
 * tbodyaccjerk-std-z
-* tbodygyro-mean-x             
-* tbodygyro-mean-y
-* tbodygyro-mean-z
-* tbodygyro-std-x              
-* tbodygyro-std-y
-* tbodygyro-std-z
+
 * tbodygyrojerk-mean-x         
 * tbodygyrojerk-mean-y
 * tbodygyrojerk-mean-z
 * tbodygyrojerk-std-x          
 * tbodygyrojerk-std-y
 * tbodygyrojerk-std-z
+
+Gyroscope measurements represented by variables below.
+* tbodygyro-mean-x             
+* tbodygyro-mean-y
+* tbodygyro-mean-z
+* tbodygyro-std-x              
+* tbodygyro-std-y
+* tbodygyro-std-z
+
+
+The magnitude of these three-dimensional signals were calculated using the Euclidean norm (tbodyaccmag, tgravityaccmag, tbodyaccjerkmag, tbodygyromag, tbodygyrojerkmag)
 * tbodyaccmag-mean             
 * tbodyaccmag-std
 * tgravityaccmag-mean
@@ -93,6 +105,9 @@ Finally, the values on each of the columns below are the calculated average valu
 * tbodygyromag-std
 * tbodygyrojerkmag-mean
 * tbodygyrojerkmag-std
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fbodyacc-XYZ, fbodyaccjerk-XYZ, fbodygyro-XYZ, fbodyaccmag, fbodyaccjerkmag, fbodygyromag, fbodygyrojerkmag. (Note the 'f' to indicate frequency domain signals). 
+
 * fbodyacc-mean-x
 * fbodyacc-mean-y
 * fbodyacc-mean-z              
@@ -119,16 +134,16 @@ Finally, the values on each of the columns below are the calculated average valu
 * fbodygyro-std-z              
 * fbodygyro-meanfreq-x
 * fbodygyro-meanfreq-y
-* fbodygyro-meanfreq-z         
+* fbodygyro-meanfreq-z  
 * fbodyaccmag-mean
 * fbodyaccmag-std
 * fbodyaccmag-meanfreq         
-* fbodybodyaccjerkmag-mean
-* fbodybodyaccjerkmag-std
-* fbodybodyaccjerkmag-meanfreq 
-* fbodybodygyromag-mean
-* fbodybodygyromag-std
-* fbodybodygyromag-meanfreq    
-* fbodybodygyrojerkmag-mean
-* fbodybodygyrojerkmag-std
-* fbodybodygyrojerkmag-meanfreq
+* fbodyaccjerkmag-mean
+* fbodyaccjerkmag-std
+* fbodyaccjerkmag-meanfreq 
+* fbodygyromag-mean
+* fbodygyromag-std
+* fbodygyromag-meanfreq    
+* fbodygyrojerkmag-mean
+* fbodygyrojerkmag-std
+* fbodygyrojerkmag-meanfreq
