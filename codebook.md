@@ -53,6 +53,8 @@ meanFreq(): Weighted average of the frequency components to obtain a mean freque
 
 Finally, the values on each of the columns below are the calculated average values when data from step 8 above is grouped by subject and activity.
 
+==================================================================================
+
 Acceleration signal was separated into body and gravity acceleration signals (tbodyacc and tgravityacc) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
 These measurements are represented by the variables below.
 * tbodyacc-mean-x
