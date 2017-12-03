@@ -16,7 +16,7 @@ processData <- function ()
     
     # 3. make activities column more readable
     activity[activity == 1] <- "walking"
-    activity[activity == 2] <- "walkling_upstairs"
+    activity[activity == 2] <- "walking_upstairs"
     activity[activity == 3] <- "walking_downstairs"
     activity[activity == 4] <- "sitting"
     activity[activity == 5] <- "standing"
